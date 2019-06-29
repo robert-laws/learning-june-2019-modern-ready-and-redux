@@ -21,4 +21,8 @@ const CommentDetail = props => {
   );
 }
 
+CommentDetail.defaultProps = {
+  author: "Anonymous"
+}
+
 export default CommentDetail;
