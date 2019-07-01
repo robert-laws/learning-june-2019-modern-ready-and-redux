@@ -27,8 +27,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div>{this.state.lat != null ? `Latitude: ${this.state.lat}` : `Error: ${this.state.errorMessage}`}</div>
-        <SeasonDisplay season="Autumn" />
+        <SeasonDisplay lat={this.state.lat} />
       </div>
     )
   }
