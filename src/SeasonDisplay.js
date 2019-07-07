@@ -1,3 +1,4 @@
+import './SeasonDisplay.css';
 import React from 'react';
 
 const seasonConfig = {
@@ -39,10 +40,10 @@ export default class SeasonDisplay extends React.Component {
 
   render() {
     return (
-      <div>
-        <i className={`${this.getIcon()} icon`} />
-        <h1>Season Display: {this.displaySeason()}</h1>
-        <i className={`${this.getIcon()} icon`} />
+      <div className={`season-display ${this.getSeason(this.props.lat, this.getMonth())}`}>
+        <i className={`${this.getIcon()} icon massive icon-left`} />
+        <h1>{this.displaySeason()}</h1>
+        <i className={`${this.getIcon()} icon massive icon-right`} />
       </div>
     ) 
   }
